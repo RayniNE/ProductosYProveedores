@@ -1,0 +1,39 @@
+﻿@model Proveedor
+
+@{
+    ViewData["Title"] = "Modificar";
+}
+
+<h1>Modificar</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Home" asp-action="ManageProveedor" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOMBRE" class="control-label"></label>
+                <input asp-for="NOMBRE" class="form-control" />
+                <span asp-validation-for="NOMBRE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DIRECCION" class="control-label"></label>
+                <input asp-for="DIRECCION" class="form-control" />
+                <span asp-validation-for="DIRECCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NUM_TELEF" class="control-label"></label>
+                <input asp-for="NUM_TELEF" class="form-control" />
+                <span asp-validation-for="NUM_TELEF" class="text-danger"></span>
+            </div>
+ 
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model Proveedor
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<h1>Ingrese el proveedor</h1>
+
+<form action="../Home/ManageProduct" method="post" id="agregar">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">ID</span>
+        </div>
+        <input asp-for="ID" class="form-control" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+        </div>
+        <input asp-for="NOMBRE" class="form-control" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Dirección</span>
+        </div>
+        <input asp-for="DIRECCION" class="form-control" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Número de telefono</span>
+        </div>
+        <input asp-for="NUM_TELEF" class="form-control" aria-describedby="basic-addon1">
+    </div>
+
+    <div>
+        <button class="btn btn-dark" type="submit"> Agregar </button>
+    </div>
+</form>
+

@@ -1,0 +1,43 @@
+﻿@model GestorProveedores
+
+
+@{
+    ViewData["Title"] = "ManageProveedor";
+}
+<div class="text-center">
+    <h1>Proveedores existentes</h1>
+</div>
+
+<div class="text-center">
+    <input type="button" name="Agregar" value="Agregar" class="btn btn-dark" onclick="window.location.href = '../Proveedor/Agregar'" />
+</div>
+
+<br />
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Número de telefono</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var proveedor in Model.Proveedores)
+        {
+            <tr>
+                <th scope="col">@proveedor.ID</th>
+                <th>@proveedor.NOMBRE</th>
+                <th>@proveedor.DIRECCION</th>
+                <th>@proveedor.NUM_TELEF</th>
+                <th>
+                    @Html.ActionLink("Editar", "Modificar", "Products", new { id = proveedor.ID }) |
+                    @Html.ActionLink("Eliminar", "Eliminar", "Products", new { id = proveedor.ID })
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>

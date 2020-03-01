@@ -1,0 +1,49 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<h1>Ingrese el producto que desea agregar al almacén</h1>
+ 
+<form action="../Home/ManageProduct" method="post" id="agregar">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">ID</span>
+        </div>
+        <input asp-for="ID" class="form-control"  aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+        </div>
+        <input asp-for="NOMBRE" class="form-control"  aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Descripción</span>
+        </div>
+        <input asp-for="DESCRIPCION" class="form-control"  aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Fecha de Vencimiento</span>
+        </div>
+        <input asp-for="FECHA_VEN" class="form-control" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">ID Proveedor</span>
+        </div>
+        <input asp-for="ID_PROVEEDOR" class="form-control"  aria-describedby="basic-addon1">
+    </div>
+
+    <div>
+        <button class="btn btn-dark" type="submit"> Agregar </button>
+    </div>
+</form>
+
+
