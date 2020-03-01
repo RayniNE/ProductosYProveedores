@@ -28,7 +28,7 @@ namespace ProductosProveedores.Controllers
             try
             {
                 gp.EliminarProveedor(id);
-                return RedirectToAction(nameof(HomeController.ManageProduct));
+                return RedirectToAction(nameof(HomeController.ManageProveedor));
             }
             catch
             {
@@ -50,7 +50,7 @@ namespace ProductosProveedores.Controllers
             {
 
                 gp.EditarProveedor(id, proveedor);
-                return RedirectToAction(nameof(HomeController.ManageProduct));
+                return RedirectToAction(nameof(HomeController.ManageProveedor));
             }
             catch
             {
